@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Zuul
+server:
+  port: 8888
+#zuul:
+#  routes:
+#    producer: /producer/**
+    #api-a:
+      #path: /producer/**
+      #serverId: producer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:8001/eureka/
+zuul:
+  #是否开启重试功能
+  retryable: true
+#ribbon:
+  #对当前服务的重试次数
+#  MaxAutoRetries: 2
+  #切换相同Server的次数
+#  MaxAutoRetriesNextServer: 0

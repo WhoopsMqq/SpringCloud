@@ -1,0 +1,11 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: producer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:8001/eureka/
+#  instance:
+#    hostname: produce1
