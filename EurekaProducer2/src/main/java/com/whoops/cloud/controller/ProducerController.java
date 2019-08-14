@@ -9,6 +9,6 @@ public class ProducerController {
 
     @GetMapping("/hello")
     public String getMessage(@RequestParam(value = "name") String name){
-        return name + ":hello spring cloud";
+        return name + ":hello spring cloud，2";
     }
 }
