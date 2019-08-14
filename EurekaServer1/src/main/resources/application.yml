@@ -8,6 +8,7 @@ eureka:
     hostname: server1
   client:
     service-url:
-      defaultZone: http://server2:8002/eureka/,http://server3:8003/eureka/
+      defaultZone: http://server1:8001/eureka/
+#      defaultZone: http://server2:8002/eureka/,http://server3:8003/eureka/
     register-with-eureka: false
     fetch-registry: false

@@ -1,0 +1,9 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: zipkin
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:8001/eureka/

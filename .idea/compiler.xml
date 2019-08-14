@@ -12,6 +12,7 @@
         <module name="EurekaServer1" />
         <module name="EurekaServer2" />
         <module name="EurekaServer3" />
+        <module name="ZipkinServer" />
         <module name="Zuul" />
       </profile>
     </annotationProcessing>
@@ -24,6 +25,7 @@
       <module name="EurekaServer1" options="-parameters" />
       <module name="EurekaServer2" options="-parameters" />
       <module name="EurekaServer3" options="-parameters" />
+      <module name="ZipkinServer" options="-parameters" />
       <module name="Zuul" options="-parameters" />
     </option>
   </component>

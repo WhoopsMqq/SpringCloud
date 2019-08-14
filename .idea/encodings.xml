@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/EurekaServer1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/EurekaServer2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/EurekaServer3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZipkinServer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Zuul" charset="UTF-8" />
   </component>
 </project>

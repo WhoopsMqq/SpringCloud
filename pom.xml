@@ -16,6 +16,7 @@
         <module>EurekaConsumer1</module>
         <module>Zuul</module>
         <module>EurekaProducer2</module>
+        <module>ZipkinServer</module>
     </modules>
 
     <parent>
