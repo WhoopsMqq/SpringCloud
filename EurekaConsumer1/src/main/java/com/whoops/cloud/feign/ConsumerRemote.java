@@ -2,9 +2,11 @@ package com.whoops.cloud.feign;
 
 import com.whoops.cloud.feign.hystrix.ConsumerRemoteHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+@Component
 @FeignClient(name = "producer",fallback = ConsumerRemoteHystrix.class)
 public interface ConsumerRemote {
     @RequestMapping(value = "/hello")

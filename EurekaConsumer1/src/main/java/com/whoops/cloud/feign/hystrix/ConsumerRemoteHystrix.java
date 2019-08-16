@@ -1,5 +1,6 @@
 package com.whoops.cloud.feign.hystrix;
 
+
 import com.whoops.cloud.feign.ConsumerRemote;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
