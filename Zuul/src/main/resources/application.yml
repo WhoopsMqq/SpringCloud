@@ -2,7 +2,7 @@ spring:
   application:
     name: Zuul
   zipkin:
-    base-url: http://localhost:8004
+    base-url: http://localhost:9411
   sleuth:
     sampler:
       probability: 1.0
@@ -21,7 +21,11 @@ eureka:
 
 zuul:
   #是否开启重试功能
-  retryable: true
+  retryable: false
+  #禁用指定的filter
+#  SendResponseFilter:
+#    post:
+#      disable: true
 ribbon:
   #对当前服务的重试次数
   MaxAutoRetries: 2

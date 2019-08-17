@@ -17,6 +17,9 @@
         <module>Zuul</module>
         <module>EurekaProducer2</module>
         <module>ZipkinServer</module>
+        <module>Hystrix</module>
+        <module>ConfigServer</module>
+        <module>ConfigClient</module>
     </modules>
 
     <parent>

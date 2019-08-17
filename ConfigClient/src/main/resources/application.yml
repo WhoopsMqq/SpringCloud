@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ConfigClient
+server:
+  port: 8322
