@@ -8,6 +8,9 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+    web:
+      client:
+        enabled: true
 eureka:
   client:
     service-url:

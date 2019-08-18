@@ -1,5 +1,10 @@
 spring:
   application:
     name: ConfigClient
+  cloud:
+    bus:
+      trace:
+        enabled: true
+      enabled: true
 server:
   port: 8322
