@@ -20,6 +20,7 @@
         <module>Hystrix</module>
         <module>ConfigServer</module>
         <module>ConfigClient</module>
+        <module>Geteway</module>
     </modules>
 
     <parent>
