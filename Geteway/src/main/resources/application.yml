@@ -6,15 +6,15 @@ spring:
       discovery:
         locator:
           enabled: true
-        routes:
-          - id: consumer
-            uri: http://localhost:7001
-            order: 0
-            predicates:
-              - Path=/consumer/**
-            filters:
-              - StripPrefix=1
-              - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+      routes:
+        - id: consumer
+          uri: lb://CONSUMER
+          order: 0
+          predicates:
+            - Path=/consumer/**
+          filters:
+            - StripPrefix=1
+            - AddResponseHeader=X-Response-Default-Foo, Default-Bar
 #  spring.cloud.gateway.discovery.locator.enabled：是否与服务注册于发现组件进行结合，通过 serviceId 转发到具体的服务实例。
 #  默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
 #  spring.cloud.gateway.routes用于配合具体的路由规则，是一个数组。这里我创建了一个 id 为default_path_to_http的路由，
