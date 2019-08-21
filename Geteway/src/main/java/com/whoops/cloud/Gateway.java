@@ -1,6 +1,7 @@
 package com.whoops.cloud;
 
 import com.whoops.cloud.filter.ElapsedFilter;
+import com.whoops.cloud.filter.ElapsedGatewayFilterFactory;
 import com.whoops.cloud.filter.TokenFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -29,5 +30,10 @@ public class Gateway {
     @Bean
     public TokenFilter tokenFilter(){
         return new TokenFilter();
+    }
+    //自定义过滤器工厂
+    @Bean
+    public ElapsedGatewayFilterFactory elapsedGatewayFilterFactory(){
+        return new ElapsedGatewayFilterFactory();
     }
 }
