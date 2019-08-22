@@ -15,8 +15,20 @@ spring:
           filters:
             - StripPrefix=1
             - AddResponseHeader=X-Response-Default-Foo, Default-Bar
-#      default-filters:
-#        -Elapsed=true
+            - Elapsed=true
+            - name: RequestRateLimiter
+              args:
+                #key-resolver，用于限流的键的解析器的 Bean 对象名字（有些绕，看代码吧）。它使用 SpEL 表达式根据#{@beanName}从 Spring 容器中获取 Bean 对象。
+                #默认情况下，使用PrincipalNameKeyResolver，以请求认证的java.security.Principal作为限流键。
+                key-resolver: '#{@remoteAddrKeyResolver}'
+                #replenishRate，令牌桶每秒填充平均速率。
+                redis-rate-limiter.replenishRate: 1
+                #burstCapacity，令牌桶容量。
+                redis-rate-limiter.burstCapacity: 5
+  redis:
+    host: localhost
+    port: 6379
+
 #  spring.cloud.gateway.discovery.locator.enabled：是否与服务注册于发现组件进行结合，通过 serviceId 转发到具体的服务实例。
 #  默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
 #  spring.cloud.gateway.routes用于配合具体的路由规则，是一个数组。这里我创建了一个 id 为default_path_to_http的路由，
@@ -31,3 +43,8 @@ eureka:
       defaultZone: http://localhost:8001/eureka/
 #logging:
 #  level: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics
